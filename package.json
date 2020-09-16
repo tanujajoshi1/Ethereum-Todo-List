@@ -1,4 +1,3 @@
-
 {
   "name": "todolist-eth",
   "version": "1.0.0",
@@ -6,7 +5,7 @@
   "main": "truffle-config.js",
   "scripts": {
     "dev": "lite-server",
-    "test": "echo \"Error: no test specified\" && sexit 1"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "ethereum",

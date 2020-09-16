@@ -17,7 +17,7 @@ contract TodoList{
     event TaskCompleted(uint256 id, bool completed);
     
      constructor () public{
-        createTask("Test how it works!!");
+        createTask("Do not leave your tasks pending");
     
     }
     //now we need to put the task of structure into the mapping

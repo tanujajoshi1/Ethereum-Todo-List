@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Dapp University | Todo List</title>
-
+    <title>Todo List || Ethereum</title>
+<link rel="shortcut icon" href="">
+<link href="./style.css" rel=stylesheet/>
     <!-- Bootstrap -->
     <link href="vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-
+    <link rel=stylesheet href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -20,8 +21,17 @@
     <style>
       main {
         margin-top: 60px;
+        
       }
-
+      body{
+        background-image: url("https://images.unsplash.com/photo-1483794344563-d27a8d18014e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80");
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+      }
+.navbar-brand{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+ font-weight: bold;
+}
       #content {
         display: none;
       }
@@ -34,19 +44,23 @@
       ul {
         margin-bottom: 0px;
       }
+      #taskList .content {
+        color: rgb(9, 131, 35);
+       
+      }
 
       #completedTaskList .content {
-        color: grey;
+        color: rgba(14, 2, 2, 0.836);
         text-decoration: line-through;
       }
     </style>
   </head>
   <body>
-    <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="http://www.dappuniversity.com/free-download" target="_blank">Dapp University | Todo List</a>
+    <nav class="navbar navbar-dark fixed-top bg-info flex-md-nowrap p-0 shadow">
+      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href='#' target="_blank">Todo List | Ethereum | TanujaJoshi</a>
       <ul class="navbar-nav px-3">
         <li class="nav-item text-nowrap d-none d-sm-none d-sm-block">
-          <small><a class="nav-link" href="#"><span id="account"></span></a></small>
+          <small><a class="nav-link" href="#"><span style="color:white;font-weight: bold;" id="account"></span></a></small>
         </li>
       </ul>
     </nav>
@@ -56,15 +70,23 @@
           <div id="loader" class="text-center">
             <p class="text-center">Loading...</p>
           </div>
+         
           <div id="content">
-            <form onSubmit="App.createTask(); return false;">
-              <input id="newTask" type="text" class="form-control" placeholder="Add task..." required>
-              <input type="submit" hidden="">
+           
+            <form onSubmit="App.createTask()">
+              <br/>
+              
+              <input id="newTask" type="text" class="form-control" placeholder="Enter your todo.." required/>
+            
+              <div class="text-center py-2">
+                <button  type="submit" class="btn btn-info">Add Task  <i class="fa fa-pencil"></i> </button>
+            </div> 
             </form>
+       
             <ul id="taskList" class="list-unstyled">
               <div class="taskTemplate" class="checkbox" style="display: none">
                 <label>
-                  <input type="checkbox" />
+                  <input type="radio" />
                   <span class="content">Task content goes here...</span>
                 </label>
               </div>
