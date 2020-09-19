@@ -11,12 +11,16 @@ This project uses truffle and ganache for test network. One can also import gana
 
 ### Cli- truffle console
 > todolist= await todoList.deployed()                    /*Deployed contract is assigned to variable todolist whicj acts as an object to the contract */
-<br/>
+>
+>
 > todolist.address                      /*gives the address of contract */
-<br/>
+>
+>
 > taskCount= await todoList.taskCount()
-<br/>
+>
+>
 > taskCount.toNumber()
-<br/>
+>
+>
 > task.id.toNumber()    /*gives the id of task*/
 
